@@ -77,7 +77,7 @@ console.log('Number of Invalid Entries = ', invalidEntries)
 */
 
 /* Searching in array */
-let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+/*let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
 
 function filterItems(arr, query) {
     return arr.filter( (el) => {
@@ -87,3 +87,37 @@ function filterItems(arr, query) {
 
 console.log(filterItems(fruits, 'ap'));
 console.log(filterItems(fruits, 'an'))
+*/
+
+// Affecting Initial Arra, modifiing, appending and deleting
+// modifing each words
+
+// Modifying each words
+let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
+
+const modifiedWords = words.filter( (word, index, arr) => {
+  arr[index+1] +=' extra'
+  return word.length < 6
+})
+
+// Appending new words
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
+const appendedWords = words.filter( (word, index, arr) => {
+  arr.push('new')
+  return word.length < 6
+})
+
+
+// Deleting words
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
+const deleteWords = words.filter( (word, index, arr) => {
+  arr.pop()
+  return word.length < 6
+})
+
+console.log(deleteWords)
+
+
+//console.log(appendedWords)
+
+//console.log(modifiedWords)
